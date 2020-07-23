@@ -13,9 +13,9 @@
 #include <iostream>
 #include <fstream>
 
-#include <seiscomp3/io/recordinput.h>
-#include <seiscomp3/io/records/sacrecord.h>
-#include <seiscomp3/core/recordsequence.h>
+#include <seiscomp/io/recordinput.h>
+#include <seiscomp/io/records/sacrecord.h>
+#include <seiscomp/core/recordsequence.h>
 
 #include "filter.h"
 

@@ -18,11 +18,11 @@
 #include "app.h"
 #include "ringbuffer.h"
 
-#include <seiscomp3/core/datetime.h>
-#include <seiscomp3/core/genericrecord.h>
-#include <seiscomp3/core/recordsequence.h>
-#include <seiscomp3/core/typedarray.h>
-#include <seiscomp3/datamodel/pick.h>
+#include <seiscomp/core/datetime.h>
+#include <seiscomp/core/genericrecord.h>
+#include <seiscomp/core/recordsequence.h>
+#include <seiscomp/core/typedarray.h>
+#include <seiscomp/datamodel/pick.h>
 
 #include <fstream>
 #include <stdint.h>

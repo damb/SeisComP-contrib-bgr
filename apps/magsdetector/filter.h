@@ -15,9 +15,9 @@
 #define __MAGS_FILTER_H__
 
 
-#include <seiscomp3/math/filter.h>
-#include <seiscomp3/math/fft.h>
-#include <seiscomp3/math/filter/butterworth.h>
+#include <seiscomp/math/filter.h>
+#include <seiscomp/math/fft.h>
+#include <seiscomp/math/filter/butterworth.h>
 
 
 template <typename T>

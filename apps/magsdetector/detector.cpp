@@ -12,23 +12,23 @@
 
 #define SEISCOMP_COMPONENT MAGSDETECTOR
 
-#include <seiscomp3/logging/log.h>
-#include <seiscomp3/core/strings.h>
-#include <seiscomp3/core/arrayfactory.h>
-#include <seiscomp3/core/typedarray.h>
-#include <seiscomp3/io/archive/xmlarchive.h>
-#include <seiscomp3/io/recordinput.h>
-#include <seiscomp3/io/records/mseedrecord.h>
-#include <seiscomp3/math/geo.h>
-#include <seiscomp3/math/filter/butterworth.h>
+#include <seiscomp/logging/log.h>
+#include <seiscomp/core/strings.h>
+#include <seiscomp/core/arrayfactory.h>
+#include <seiscomp/core/typedarray.h>
+#include <seiscomp/io/archive/xmlarchive.h>
+#include <seiscomp/io/recordinput.h>
+#include <seiscomp/io/records/mseedrecord.h>
+#include <seiscomp/math/geo.h>
+#include <seiscomp/math/filter/butterworth.h>
 
-#include <seiscomp3/datamodel/eventparameters.h>
-#include <seiscomp3/datamodel/event.h>
-#include <seiscomp3/datamodel/origin.h>
-#include <seiscomp3/datamodel/magnitude.h>
-#include <seiscomp3/datamodel/stationmagnitude.h>
+#include <seiscomp/datamodel/eventparameters.h>
+#include <seiscomp/datamodel/event.h>
+#include <seiscomp/datamodel/origin.h>
+#include <seiscomp/datamodel/magnitude.h>
+#include <seiscomp/datamodel/stationmagnitude.h>
 
-#include <seiscomp3/utils/files.h>
+#include <seiscomp/utils/files.h>
 
 #include <iomanip>
 
