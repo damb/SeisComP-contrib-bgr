@@ -11,7 +11,7 @@ SET(DETECTOR_SOURCES main.cpp app.cpp detector.cpp filter.cpp)
 SC_ADD_EXECUTABLE(DETECTOR ${DETECTOR_TARGET})
 SC_LINK_LIBRARIES_INTERNAL(${DETECTOR_TARGET} client)
 
-SC_INSTALL_INIT(${DETECTOR_TARGET} ../../../trunk/apps/templates/initd.py)
+SC_INSTALL_INIT(${DETECTOR_TARGET} ../../../common/apps/templates/initd.py)
 
 FILE(GLOB descs "${CMAKE_CURRENT_SOURCE_DIR}/descriptions/*.xml")
 INSTALL(FILES ${descs} DESTINATION ${SC3_PACKAGE_APP_DESC_DIR})

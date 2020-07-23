@@ -24,7 +24,7 @@ template <typename T>
 void readConfig(const Seiscomp::Client::Application *, T *storage, const char *name) {}
 
 template <typename T>
-void readCLI(const Seiscomp::Client::CommandLine *, T *storage, const char *name) {}
+void readCLI(const Seiscomp::System::CommandLine *, T *storage, const char *name) {}
 
 
 #define IMPL_READ_CONFIG(T, method)\
@@ -35,7 +35,7 @@ void readConfig<T>(const Seiscomp::Client::Application *app, T *storage, const c
 }
 
 template <>
-void readCLI<bool>(const Seiscomp::Client::CommandLine *cli, bool *storage, const char *name) {
+void readCLI<bool>(const Seiscomp::System::CommandLine *cli, bool *storage, const char *name) {
 	if ( cli->hasOption(name) )
 		*storage = true;
 }
@@ -52,7 +52,7 @@ struct OptionImpl : Application::Option {
 	: Application::Option(cfgname, cligroup, cliparam,
 	                      clidesc, clidefault, cliswitch), storage(var) {}
 
-	void bind(Seiscomp::Client::CommandLine *cli) {
+	void bind(Seiscomp::System::CommandLine *cli) {
 		if ( cliParam == NULL ) return;
 		if ( cliGroup != NULL ) cli->addGroup(cliGroup);
 		if ( cliSwitch )
@@ -63,7 +63,7 @@ struct OptionImpl : Application::Option {
 			               cliParam, cliDesc, storage, cliDefault);
 	}
 
-	bool get(Seiscomp::Client::CommandLine *cli) {
+	bool get(Seiscomp::System::CommandLine *cli) {
 		if ( cliParam == NULL ) return true;
 		if ( cliSwitch ) readCLI(cli, storage, cliParam);
 		return true;
@@ -93,7 +93,7 @@ struct OptionVecImpl : Application::Option {
 	: Application::Option(cfgname, cligroup, cliparam,
 	                      clidesc, clidefault, cliswitch), storage(var) {}
 
-	void bind(Seiscomp::Client::CommandLine *cli) {
+	void bind(Seiscomp::System::CommandLine *cli) {
 		if ( cliParam == NULL ) return;
 
 		if ( cliGroup != NULL ) cli->addGroup(cliGroup);
@@ -102,7 +102,7 @@ struct OptionVecImpl : Application::Option {
 					   cliParam, cliDesc, storage);
 	}
 
-	bool get(Seiscomp::Client::CommandLine *cli) {
+	bool get(Seiscomp::System::CommandLine *cli) {
 		if ( cliParam == NULL ) return true;
 		if ( cliSwitch ) readCLI(cli, storage, cliParam);
 		return true;

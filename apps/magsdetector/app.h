@@ -15,7 +15,7 @@
 #define __SEISCOMP_APPLICATIONS_MAGSDETECTOR_APP_H__
 
 
-#include <seiscomp3/client/streamapplication.h>
+#include <seiscomp/client/streamapplication.h>
 
 #include <iostream>
 #include <vector>
@@ -36,8 +36,8 @@ class Application : public Seiscomp::Client::StreamApplication {
 			  cliParam(cliparam), cliDesc(clidesc),
 			  cliDefault(clidefault), cliSwitch(cliswitch) {}
 
-			virtual void bind(Seiscomp::Client::CommandLine *cli) = 0;
-			virtual bool get(Seiscomp::Client::CommandLine *cli) = 0;
+			virtual void bind(Seiscomp::System::CommandLine *cli) = 0;
+			virtual bool get(Seiscomp::System::CommandLine *cli) = 0;
 			virtual bool get(const Seiscomp::Client::Application *app) = 0;
 			virtual void printStorage(std::ostream &os) = 0;
 
